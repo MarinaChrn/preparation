@@ -3,15 +3,11 @@ const pQueEl = document.querySelector('.factorial-question');
 let answer=1;
 
 inpEl.addEventListener('change', (e)=>{
-    const factor = (i) => {
-        const value = e.target.value;
-        
-        for (let i = 1; i <= value; i++) {
-            answer = answer * i
-        }
-        pQueEl.textContent = value + "! = " + answer;
+    const value = e.target.value;
+    for (let i = 1; i <= value; i++) {
+        answer = answer * i
     }
-    factor(1)
+    pQueEl.textContent = value + "! = " + answer;
     answer = 1;
 })
 
